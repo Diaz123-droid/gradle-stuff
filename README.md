@@ -4,8 +4,10 @@ This is project is solely a gradle learning project. Nothing much.
 
 ## Purpose
 
-It will be ever changing. Until I find anything good to use it for,
+> It will be ever changing. Until I find anything good to use it for,
 theres nothing useful that should come of it!
+> If you do find this project interesting, please do add some changes
+to your liking.
 
 ## 0.0.1 Release Notes
 
