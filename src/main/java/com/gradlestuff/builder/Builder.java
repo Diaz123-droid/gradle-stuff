@@ -10,6 +10,8 @@ public class Builder{
     public static void main(String[] args) throws IOException{
         String language = args[0];
 
+        System.out.println("I want to use this branch to experiment with networking in python");
+
         InputStream resourceStream = Builder.class.getClassLoader().getResourceAsStream(language + ".txt");
         assert resourceStream != null;
         BufferedReader bufferedInputStream = new BufferedReader(new InputStreamReader(resourceStream, StandardCharsets.UTF_8));
