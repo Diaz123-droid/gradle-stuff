@@ -8,3 +8,9 @@
 plugins {
     java
 }
+
+tasks.named<Jar>("jar") {
+    manifest {
+        attributes["Main-Class"] = "com.gradlestuff.builder.Builder"
+    }
+}

@@ -1,6 +1,6 @@
 package com.gradlestuff.builder;
 
-import java.io.BufferReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,7 +12,7 @@ public class Builder{
 
         InputStream resourceStream = Builder.class.getClassLoader().getResourceAsStream(language + ".txt");
         assert resourceStream != null;
-        BufferReader bufferedInputStream = new BufferReader(new InputStreamReader(resourceStream, StandardCharsets.UTF_8));
+        BufferedReader bufferedInputStream = new BufferedReader(new InputStreamReader(resourceStream, StandardCharsets.UTF_8));
 
         System.out.println(bufferedInputStream.readLine());
     }
