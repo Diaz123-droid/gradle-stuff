@@ -14,3 +14,12 @@ tasks.named<Jar>("jar") {
         attributes["Main-Class"] = "com.gradlestuff.builder.Builder"
     }
 }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+}
+
