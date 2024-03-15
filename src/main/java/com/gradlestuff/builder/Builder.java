@@ -10,7 +10,7 @@ public class Builder{
     public static void main(String[] args) throws IOException{
         String language = args[0];
 
-        System.out.println("I want to use this branch to experiment with networking in python");
+        System.out.println("I want to use this branch to experiment with networking in java");
 
         InputStream resourceStream = Builder.class.getClassLoader().getResourceAsStream(language + ".txt");
         assert resourceStream != null;
