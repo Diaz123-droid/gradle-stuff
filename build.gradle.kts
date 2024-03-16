@@ -11,7 +11,7 @@ plugins {
 
 tasks.named<Jar>("jar") {
     manifest {
-        attributes["Main-Class"] = "com.gradlestuff.builder.Builder"
+        attributes["Main-Class"] = "com.inventorymanagementsystem.ims.Main"
     }
 }
 

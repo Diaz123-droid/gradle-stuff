@@ -24,3 +24,8 @@ is meant to be complete yet simple for learning gradle and git concurrently.
 > I decided to create a new branch to learn how branchings work.I understand
 how the master branch should be treated with some bit of respect, not just
 anything should go into it unless it all looks good to merge.
+
+## 0.02 Release Notes
+
+> Changed the structure of the project. Decided to use the infrustructure to
+build an Inventory Management System.
