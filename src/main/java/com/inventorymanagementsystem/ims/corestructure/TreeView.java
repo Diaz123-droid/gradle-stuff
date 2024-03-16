@@ -1,4 +1,4 @@
-package com.inventorymanagementsystem.ims;
+package com.inventorymanagementsystem.ims.corestructure;
 
 import java.text.MessageFormat;
 import java.awt.*;

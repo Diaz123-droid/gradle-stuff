@@ -1,4 +1,4 @@
-package com.inventorymanagementsystem.ims;
+package com.inventorymanagementsystem.ims.corestructure;
 
 import javax.swing.JTabbedPane;
 
@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public class TopTabMenu extends JTabbedPane {
+public class TabMenuTabView extends JTabbedPane {
     /**
      * This mathod returns a bookstyle menu bar to parent frame
      * @return JTabbedPane

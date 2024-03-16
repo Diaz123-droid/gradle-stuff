@@ -1,4 +1,4 @@
-package com.inventorymanagementsystem.ims;
+package com.inventorymanagementsystem.ims.corestructure;
 
 import javax.swing.*;
 import java.awt.*;

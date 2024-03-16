@@ -1,5 +1,9 @@
 package com.inventorymanagementsystem.ims;
 
+import com.inventorymanagementsystem.ims.corestructure.LeftPaneMenuList;
+import com.inventorymanagementsystem.ims.corestructure.MainContentView;
+import com.inventorymanagementsystem.ims.corestructure.TabMenuTabView;
+
 import java.awt.event.*;
 import java.awt.*;
 import javax.swing.JLabel;
@@ -7,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
+
 
 public class Frame extends JFrame implements ActionListener {
     private int defaultWindowWidth = 1280;
@@ -34,7 +39,7 @@ public class Frame extends JFrame implements ActionListener {
         mainView.add(bottomView, BorderLayout.SOUTH);                                    // Add bottom view
 
         add(mainView, BorderLayout.CENTER); // Add main view to the center of the frame
-        add(new TopTabMenu().tTabMenu(), BorderLayout.NORTH); // Add tabbedPane to the top of the frame
+        add(new TabMenuTabView().tTabMenu(), BorderLayout.NORTH); // Add tabbedPane to the top of the frame
 
         setVisible(true);
 
