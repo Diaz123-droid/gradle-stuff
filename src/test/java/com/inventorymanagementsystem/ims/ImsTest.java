@@ -7,6 +7,6 @@ import java.io.IOException;
 public class ImsTest {
     @Test
     public void testBuilder() throws IOException{
-        Main.main(new String[]{"en"});
+        Main.main(new String[]{});
     }
 }

@@ -12,7 +12,6 @@ import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 
-
 public class Frame extends JFrame implements ActionListener {
     private int defaultWindowWidth = 1280;
     private int defaultWindowHeight = 800;
