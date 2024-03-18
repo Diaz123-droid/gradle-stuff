@@ -14,6 +14,8 @@ import javax.swing.ListSelectionModel;
 import javax.swing.JScrollPane;
 
 public class LeftPaneMenuList extends JFrame {
+    public static JPanel currentJPanel = new JPanel();
+
     public JPanel LeftPaneMenuListView() {
         // Create a panel to hold the left pane menu list
         JPanel leftPanePanel = new JPanel(new BorderLayout());
@@ -48,7 +50,7 @@ public class LeftPaneMenuList extends JFrame {
 
         // Add the JList to a scroll pane
         JScrollPane menuScrollPane = new JScrollPane(menuList);
-
+        menuList.setBackground(new Color(3,18,31 ));
         // Add the scroll pane to the left pane panel
         leftPanePanel.add(menuScrollPane, BorderLayout.CENTER);
 
@@ -74,6 +76,10 @@ public class LeftPaneMenuList extends JFrame {
         }
     }
 
+    public JPanel GetSelectedPane(){
+        return currentJPanel;
+    } 
+
     // Custom cell renderer to display menu items with icon and label
     private static class MenuItemRenderer extends JPanel implements ListCellRenderer<MenuItem> {
         private JLabel iconLabel;
@@ -84,10 +90,11 @@ public class LeftPaneMenuList extends JFrame {
             setOpaque(true);
 
             iconLabel = new JLabel();
-            iconLabel.setBorder(BorderFactory.createEmptyBorder(0, 5, 0, 5));
+            iconLabel.setBorder(BorderFactory.createEmptyBorder(15, 5, 5, 5));
             add(iconLabel, BorderLayout.WEST);
 
             textLabel = new JLabel();
+            textLabel.setFont(new Font("Arial", Font.PLAIN, 16));
             add(textLabel, BorderLayout.CENTER);
         }
 
@@ -96,13 +103,18 @@ public class LeftPaneMenuList extends JFrame {
                 boolean isSelected, boolean cellHasFocus) {
             iconLabel.setIcon(value.getIcon());
             textLabel.setText(value.getLabel());
-
+            
             if (isSelected) {
+                textLabel.setFont(new Font("Arial", Font.BOLD, 16));
                 setBackground(list.getSelectionBackground());
                 setForeground(list.getSelectionForeground());
+                textLabel.setForeground(Color.BLACK);
+                currentJPanel.add(new JLabel("Hello There!"));
             } else {
+                textLabel.setFont(new Font("Arial", Font.PLAIN, 16));
                 setBackground(list.getBackground());
                 setForeground(list.getForeground());
+                textLabel.setForeground(new Color(200,200,200));
             }
 
             return this;

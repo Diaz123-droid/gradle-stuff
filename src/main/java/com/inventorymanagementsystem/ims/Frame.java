@@ -36,10 +36,10 @@ public class Frame extends JFrame implements ActionListener {
         mainView.add(treeScrollPane, BorderLayout.WEST);                                 // Add Tree to the left
         mainView.add(new MainContentView().MainContentViewModel(), BorderLayout.CENTER); // Add book view to the center
         mainView.add(bottomView, BorderLayout.SOUTH);                                    // Add bottom view
-
+        
         add(mainView, BorderLayout.CENTER); // Add main view to the center of the frame
         add(new TabMenuTabView().tTabMenu(), BorderLayout.NORTH); // Add tabbedPane to the top of the frame
-
+        
         setVisible(true);
 
         // Main Frame Settings
@@ -52,7 +52,6 @@ public class Frame extends JFrame implements ActionListener {
         this.setIconImage(icon.getImage()); // Set image as window icon
         this.setLocationRelativeTo(null);
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
