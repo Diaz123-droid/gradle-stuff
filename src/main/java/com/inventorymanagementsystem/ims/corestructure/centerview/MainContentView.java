@@ -1,6 +1,9 @@
-package com.inventorymanagementsystem.ims.corestructure;
+package com.inventorymanagementsystem.ims.corestructure.centerview;
 
 import javax.swing.*;
+
+import com.inventorymanagementsystem.ims.charts.LineGraph;
+
 import java.awt.*;
 
 public class MainContentView extends JPanel {
@@ -9,9 +12,7 @@ public class MainContentView extends JPanel {
         JPanel centerView = new JPanel();
         centerView.setBackground(Color.WHITE);
         centerView.setLayout(new BorderLayout());
-        JLabel bookViewLabel = new JLabel("Book View");
-        bookViewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-        centerView.add(bookViewLabel, BorderLayout.CENTER);
+        centerView.add(new LineGraph().getLineGraph());
 
         return centerView;
     }

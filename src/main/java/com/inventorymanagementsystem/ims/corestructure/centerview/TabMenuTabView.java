@@ -1,4 +1,4 @@
-package com.inventorymanagementsystem.ims.corestructure;
+package com.inventorymanagementsystem.ims.corestructure.centerview;
 
 import javax.swing.JTabbedPane;
 

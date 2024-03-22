@@ -1,17 +1,7 @@
 package com.inventorymanagementsystem.ims.corestructure;
 
 import java.awt.*;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
-import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.ListCellRenderer;
-import javax.swing.ListSelectionModel;
-import javax.swing.JScrollPane;
+import javax.swing.*;
 
 public class LeftPaneMenuList extends JFrame {
     public static JPanel currentJPanel = new JPanel();
@@ -50,7 +40,7 @@ public class LeftPaneMenuList extends JFrame {
 
         // Add the JList to a scroll pane
         JScrollPane menuScrollPane = new JScrollPane(menuList);
-        menuList.setBackground(new Color(3,18,31 ));
+        menuList.setBackground(new Color(41,41,41 ));
         // Add the scroll pane to the left pane panel
         leftPanePanel.add(menuScrollPane, BorderLayout.CENTER);
 
