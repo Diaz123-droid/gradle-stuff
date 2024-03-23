@@ -1,34 +1,42 @@
 package com.inventorymanagementsystem.ims;
 
-import com.inventorymanagementsystem.ims.corestructure.LeftPaneMenuList;
-import com.inventorymanagementsystem.ims.corestructure.centerview.TabMenuTabView;
-import com.inventorymanagementsystem.ims.corestructure.centerview.TabbedMainPane;
-import com.inventorymanagementsystem.ims.corestructure.rightview.RightViewTabManager;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import java.awt.event.*;
-import java.awt.*;
-import javax.swing.JPanel;
-import javax.swing.JFrame;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JScrollPane;
+
+import javax.swing.*;
+
+import com.inventorymanagementsystem.ims.corestructure.LeftPaneMenuList;
+import com.inventorymanagementsystem.ims.corestructure.centerview.CenterViewTabManager;
+import com.inventorymanagementsystem.ims.corestructure.leftview.LeftViewTabManager;
+import com.inventorymanagementsystem.ims.corestructure.rightview.RightViewTabManager;
 
 public class Frame extends JFrame implements ActionListener {
     Frame() {
         // Create main view
-        JPanel mainView = new JPanel();
-        mainView.setLayout(new BorderLayout());
+        JSplitPane mainView = new JSplitPane();
+        JSplitPane mainRightPane = new JSplitPane();
+        // mainView.setLayout(new BorderLayout());
+        mainView.setOrientation(JSplitPane.HORIZONTAL_SPLIT);
 
         // Create left pane with for core models
         JScrollPane treeScrollPane = new JScrollPane(new LeftPaneMenuList().LeftPaneMenuListView());
         treeScrollPane.setPreferredSize(new Dimension(300, getHeight())); // Set fixed width for tree
 
         // Add components to the main view panel
-        mainView.add(treeScrollPane, BorderLayout.WEST);            // Add Tree to the left
-        mainView.add(new TabbedMainPane().getTabbedMainPane(), BorderLayout.CENTER);       // Add book view to the center
-        mainView.add(new RightViewTabManager().getRightViewTabManager(), BorderLayout.EAST);                // Add bottom view
+        mainRightPane.setLeftComponent(new CenterViewTabManager().getTabbedMainPane());
+        mainRightPane.setRightComponent(new RightViewTabManager().getRightViewTabManager());
+
+        mainView.setLeftComponent(treeScrollPane );            // Add Tree to the left
+        mainView.setRightComponent(mainRightPane);              // Add split pane to the right
         
         add(mainView, BorderLayout.CENTER);                         // Add main view to the frame
-        add(new TabMenuTabView().tTabMenu(), BorderLayout.NORTH);   // Add tabbedPane to the top of the frame
+        add(new LeftViewTabManager().tTabMenu(), BorderLayout.NORTH);   // Add tabbedPane to the top of the frame
         
         setVisible(true);
 
