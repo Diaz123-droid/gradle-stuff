@@ -11,7 +11,7 @@ plugins {
 
 tasks.named<Jar>("jar") {
     manifest {
-        attributes["Main-Class"] = "com.gradlestuff.builder.Builder"
+        attributes["Main-Class"] = "com.inventorymanagementsystem.ims.Main"
     }
 }
 
@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    implementation("org.jfree:jfreechart:1.5.3")
 }
 
 tasks.named <Test>("test") {
